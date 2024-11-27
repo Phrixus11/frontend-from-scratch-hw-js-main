@@ -19,8 +19,8 @@ findCommonElements([1, 2, 3], [2, 3, 4]) // [2, 3]
 
 //Вариант 1
 function findCommonElements(array1, array2) {
-    let newArray = [array1[0]];
-    let isIssue = false;
+    let newArray = [];
+    let isIssue = true;
     for (let i1 = 0; i1 < array1.length; i1++) {
         for (let i2 = 0; i2 < array2.length; i2++) {
             if (array1[i1] === array2[i2]) {
@@ -56,7 +56,7 @@ function findCommonElements(array1, array2) {
 // }
 
 
-console.log(findCommonElements([2, 5, 3, 4, 'banana', 1, 5, 2, 3, 4, 'banana'], [1, 2, 3, 4, 'banana', 1, 2, 3, 4, 'banana', 5]));
+console.log(findCommonElements([1, 2, 3], [2, 3, 4]));
 
 
 function includesElement(array, element) {
