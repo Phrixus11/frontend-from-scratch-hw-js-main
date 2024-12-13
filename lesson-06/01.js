@@ -17,3 +17,19 @@ const WEB_TECH_IMAGES = [
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/c8a1f4a6-1337-4899-bdfd-a8c9c7bb806a_css-magic-logo.jpg',
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
 ]
+
+const prevButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
+const webImage = document.getElementById("web-tech-image");
+
+let i = 0;
+
+prevButton.addEventListener('click', function () {
+  i > 0 && i <= WEB_TECH_IMAGES.length - 1 ? i-- : i = WEB_TECH_IMAGES.length - 1;
+  webImage.src = WEB_TECH_IMAGES[i]  // так же можно через webImage.setAttribute('src', WEB_TECH_IMAGES[i])
+})
+
+nextButton.addEventListener('click', function () {
+  i >= 0 && i < WEB_TECH_IMAGES.length - 1 ? i++ : i = 0 ;
+  webImage.src = WEB_TECH_IMAGES[i]  // так же можно через webImage.setAttribute('src', 'WEB_TECH_IMAGES[i]')
+})
